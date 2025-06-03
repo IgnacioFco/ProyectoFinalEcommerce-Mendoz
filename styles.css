@@ -416,6 +416,31 @@ body {
     background: #e55a2b;
 }
 
+
+
+
+
+.vaciar-carrito-btn {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.vaciar-carrito-btn:hover {
+  background-color: #e04345;
+}
+
+
+
+
+
+
 /* Footer */
 .footer {
     background: #000;
