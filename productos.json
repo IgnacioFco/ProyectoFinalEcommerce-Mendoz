@@ -32,7 +32,7 @@
     "descripcion": "Versión clásica con acabado dorado y funciones avanzadas de cronometraje.",
     "precio": 699,
     "categoria": "I-GOLD",
-    "imagen": "⌚",
+    "imagen": "imagenes/rELOJaa.jpg",
     "stock": 5
   },
   {
@@ -41,7 +41,7 @@
     "descripcion": "Diseño elegante y minimalista con pantalla digital y analógica.",
     "precio": 280,
     "categoria": "LONDON",
-    "imagen": "⌚",
+    "imagen": "imagenes/relojBB.jpg",
     "stock": 12
   },
   {
@@ -50,7 +50,7 @@
     "descripcion": "Modelo básico con gran durabilidad y diseño colorido para jóvenes.",
     "precio": 89,
     "categoria": "BAM-G",
-    "imagen": "⌚",
+    "imagen": "imagenes/Relojcccc.jpg",
     "stock": 20
   }
 ]
