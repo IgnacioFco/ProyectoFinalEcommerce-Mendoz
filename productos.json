@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nombre": "I-GOLD A9000",
+    "descripcion": "El icónico G-SHOCK de metal con conectividad Bluetooth y energía solar.",
+    "precio": 499,
+    "categoria": "I-GOLD",
+    "imagen": "imagenes/RelojAAA.jpg",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "nombre": "LONDON B500",
+    "descripcion": "Elegancia deportiva con tecnología Bluetooth y cronógrafo de alta precisión.",
+    "precio": 350,
+    "categoria": "LONDON",
+    "imagen": "imagenes/rELOJBBB.jpg",
+    "stock": 15
+  },
+  {
+    "id": 3,
+    "nombre": "BAM G-290",
+    "descripcion": "Diseño juvenil y vibrante con resistencia al agua y múltiples funciones.",
+    "precio": 120,
+    "categoria": "BAM-G",
+    "imagen": "imagenes/RelojCCC.jpg",
+    "stock": 8
+  },
+  {
+    "id": 4,
+    "nombre": "I-GOLD A8500",
+    "descripcion": "Versión clásica con acabado dorado y funciones avanzadas de cronometraje.",
+    "precio": 699,
+    "categoria": "I-GOLD",
+    "imagen": "⌚",
+    "stock": 5
+  },
+  {
+    "id": 5,
+    "nombre": "LONDON B350",
+    "descripcion": "Diseño elegante y minimalista con pantalla digital y analógica.",
+    "precio": 280,
+    "categoria": "LONDON",
+    "imagen": "⌚",
+    "stock": 12
+  },
+  {
+    "id": 6,
+    "nombre": "BAM G-180",
+    "descripcion": "Modelo básico con gran durabilidad y diseño colorido para jóvenes.",
+    "precio": 89,
+    "categoria": "BAM-G",
+    "imagen": "⌚",
+    "stock": 20
+  }
+]

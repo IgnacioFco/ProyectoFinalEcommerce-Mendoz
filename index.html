@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IRIS | Innovación en Tecnología</title>
+      <!--icono superior en title-->
+    <link rel="icon" type="images/jpg" href="imagenes/FOtarrib-fotoCIRQ333.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,23 +14,44 @@
         <nav class="nav-container">
             <a href="#" class="logo">IRIS</a>
             <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a>Relojes</a></li>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="relojes.html" class="nav-link">Relojes</a></li>
                 <li><a href="sobreNosotros.html" class="nav-link">Sobre Nosotros</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
             
-            <!-- Botón del carrito -->
+            
             <div class="cart-container">
-                <button class="cart-button">
+                <button class="cart-button" id="toggle-cart">
                     <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="9" cy="21" r="1"></circle>
                         <circle cx="20" cy="21" r="1"></circle>
                         <path d="m1 1 4 4 13 3h4l-1 5-13 2-4-4-1-3-2-7z"></path>
                     </svg>
                     <span class="cart-count">0</span>
-                    <button id="vaciar-carrito" class="vaciar-carrito-btn">🗑 Vaciar</button>
                 </button>
+                
+                <!-- Panel del carrito desplegable -->
+                <div class="cart-panel" id="cart-panel">
+                    <div class="cart-header">
+                        <h3>Tu Carrito</h3>
+                        <button class="close-cart" id="close-cart">&times;</button>
+                    </div>
+                    
+                    <div class="cart-items" id="cart-items">
+                        <p class="cart-empty">Tu carrito está vacío</p>
+                    </div>
+                    
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <strong>Total: $<span id="cart-total">0</span></strong>
+                        </div>
+                        <div class="cart-actions">
+                            <button id="vaciar-carrito" class="btn-secondary">🗑 Vaciar Carrito</button>
+                            <button id="finalizar-compra" class="btn-primary">✅ Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="hamburger">
@@ -39,8 +62,8 @@
         </nav>
     </header>
 
-
-
+    <!-- Overlay para el carrito -->
+    <div class="cart-overlay" id="cart-overlay"></div>
 
     <!-- Hero -->
     <section class="hero" id="inicio">
@@ -57,52 +80,12 @@
         <div class="particle" style="top: 30%; left: 70%; width: 12px; height: 12px; animation-delay: 1s;"></div>
     </section>
 
-    <!-- Productos Destacados  -->
+    <!-- Productos Destacados -->
     <section class="products" id="productos-destacados">
         <div class="container">
             <h2 class="section-title">Productos Destacados</h2>
-            <div class="products-grid">
-                
-                <div class="product-card">
-                    <div class="product-image">⌚</div>
-                    <div class="product-content">
-                        <h3 class="product-title">I-GOLD A9000</h3>
-                        <p class="product-description">El icónico G-SHOCK de metal con conectividad Bluetooth y energía solar.</p>
-                        <div class="product-price">$499</div>
-                        
-                        <button class="add-to-cart-btn"
-                            data-id="1"
-                            data-nombre="I-GOLD A9000"
-                            data-precio="499">Agregar al Carrito</button>
-
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">⌚</div>
-                    <div class="product-content">
-                        <h3 class="product-title">LONDON B500</h3>
-                        <p class="product-description">Elegancia deportiva con tecnología Bluetooth y cronógrafo de alta precisión.</p>
-                        <div class="product-price">$350</div>
-                        <button class="add-to-cart-btn"
-                            data-id="2"
-                            data-nombre="LONDON B500"
-                            data-precio="350">Agregar al Carrito</button>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">⌚</div>
-                    <div class="product-content">
-                        <h3 class="product-title">BAM G-290</h3>
-                        <p class="product-description">Diseño juvenil y vibrante con resistencia al agua y múltiples funciones.</p>
-                        <div class="product-price">$120</div>
-                        <button class="add-to-cart-btn"
-                            data-id="3"
-                            data-nombre="BAM G-290"
-                            data-precio="120">Agregar al Carrito</button>
-                    </div>
-                </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Los productos se cargarán dinámicamente desde JavaScript -->
             </div>
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="relojes.html" class="cta-button">Ver Todos los Relojes</a>
@@ -110,7 +93,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Sobre Nosotros -->
     <section class="features" id="sobre-nosotros">
         <div class="container">
             <h2 class="section-title">¿Por qué IRIS?</h2>
@@ -130,7 +113,7 @@
                 <div class="feature-item">
                     <div class="feature-icon">🏆</div>
                     <h3 class="feature-title">Calidad</h3>
-                    <p>Más de 75 años de experiencia en tecnología .</p>
+                    <p>Más de 75 años de experiencia en tecnología.</p>
                 </div>
                 
                 <div class="feature-item">
@@ -142,16 +125,14 @@
         </div>
     </section>
 
-    <!-- contacto  -->
-
+    <!-- Contacto -->
     <section class="contacto" id="contacto">
         <div class="container">
             <h2 class="section-title">Mantente Informado</h2>
             <p>Recibe las últimas noticias y ofertas exclusivas de IRIS</p>
-            <form class="contacto-form">
-                <input type="email" class="contacto-input" placeholder="Tu dirección de email">
+            <form class="contacto-form" id="newsletter-form">
+                <input type="email" class="contacto-input" id="email-input" placeholder="Tu dirección de email" required>
                 <button type="submit" class="contacto-button">Suscribirse</button>
-
             </form>
         </div>
     </section>
@@ -171,25 +152,23 @@
             <div class="footer-section">
                 <h3>Sobre Nosotros</h3>
                 <ul>
-                    <li><a href="#">Nuestra Historia</a></li>
                     <li><a href="#">Misión y Visión</a></li>
-                    <li><a href="#">Tecnología</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
                 <h3>Empresa</h3>
                 <ul>
-                    <li><a href="#">Acerca de IRIS</a></li>
+                    <li><a href="sobreNosotros.html" class="nav-link">Acerca de IRIS</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
                 <h3>Conecta</h3>
                 <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">YouTube</a></li>
+                  <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li><a href="https://x.com/?lang=es/" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
                 </ul>
             </div>
         </div>
@@ -198,9 +177,27 @@
             <p>&copy; 2025 IRIS ©. Todos los derechos reservados.</p>
         </div>
     </footer>
-<script src="main.js"></script>
 
+    <!-- Modal de éxito de compra -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>¡Compra Exitosa! ✅</h2>
+            </div>
+            <div class="modal-body">
+                <p>Tu pedido ha sido procesado correctamente.</p>
+                <div id="order-summary"></div>
+                <p><strong>Número de orden: #<span id="order-number"></span></strong></p>
+                <p>Recibirás un email de confirmación en breve.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" id="close-success-modal">Continuar Comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="main.js"></script>
 </body>
-
-
 </html>
