@@ -245,7 +245,6 @@ body {
 }
 
 .cart-item-image {
-    /* font-size: 2rem; REMOVED (Era para el emoji) */
     width: 50px;
     height: 50px;
     display: flex;
@@ -953,12 +952,30 @@ body {
         gap: 20px;
     }
     
-    .cart-panel {
-        width: 95vw;
-        max-width: 400px;
-        right: 2.5vw;
-    }
-    
+
+    .cart-container { position: static; }
+
+  .cart-panel {
+    position: fixed;         
+    top: 72px;                
+    left: 50%;
+    right: auto;
+    width: 90vw;           
+    max-width: 400px;       
+    transform: translate(-50%, -20px);
+    overflow: visible;   
+  }
+
+  .cart-panel.active {
+    transform: translate(-50%, 10px);
+  }
+  
+  .cart-items {
+  max-height: calc(80vh - 140px);
+  overflow-y: auto;
+}
+
+
     .contacto-form {
         flex-direction: column;
         gap: 15px;

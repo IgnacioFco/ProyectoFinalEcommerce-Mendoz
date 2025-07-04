@@ -371,7 +371,7 @@ class TiendaIRIS {
             toast: true,
             position: 'top-end',
             showConfirmButton: false,
-            timer: 3000,
+            timer: 1000,
             timerProgressBar: true,
             icon: tipo === 'success' ? 'success' : (tipo === 'error' ? 'error' : (tipo === 'warning' ? 'warning' : 'info')),
             title: mensaje
