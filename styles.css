@@ -41,7 +41,7 @@ body {
     margin: 0 auto;
 }
 
-.logo {
+/* .logo {
     font-size: 2rem;
     font-weight: bold;
     color: #fff;
@@ -50,7 +50,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
+} */
 
 .nav-menu {
     display: flex;
