@@ -85,6 +85,21 @@ body {
     width: 100%;
 }
 
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+
+
+
 /* ====================================
    CARRITO DE COMPRAS
    ==================================== */
@@ -499,16 +514,27 @@ body {
 
 /* Partículas animadas */
 .particle {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), rgba(255,255,255,0));
+  animation: orbit 10s infinite ease-in-out;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
+@keyframes orbit {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(10px, -40px) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+    opacity: 0.5;
+  }
 }
+
 
 /* ====================================
    SECCIÓN DE PRODUCTOS
@@ -916,6 +942,22 @@ body {
     }
 }
 
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.hero h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
 
 
 
