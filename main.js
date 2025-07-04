@@ -23,12 +23,12 @@ class TiendaIRIS {
 
             if (esPaginaRelojes) {
                 this.productos = [
-                    { id: 1, nombre: "I-GOLD A9000", descripcion: "El icónico G-SHOCK de metal con conectividad Bluetooth y energía solar.", precio: 999, categoria: "I-GOLD", imagen: "images/i-gold-a9000.jpg", stock: 10 },
-                    { id: 2, nombre: "LONDON B500", descripcion: "Elegancia deportiva con tecnología Bluetooth y cronógrafo de alta precisión.", precio: 350, categoria: "LONDON", imagen: "images/london-b500.jpg", stock: 15 },
-                    { id: 3, nombre: "BAM G-290", descripcion: "Diseño juvenil y vibrante con resistencia al agua y múltiples funciones.", precio: 120, categoria: "BAM-G", imagen: "images/bam-g-290.jpg", stock: 8 },
-                    { id: 4, nombre: "I-GOLD A8500", descripcion: "Versión clásica con acabado dorado y funciones avanzadas de cronometraje.", precio: 699, categoria: "I-GOLD", imagen: "images/i-gold-a8500.jpg", stock: 5 },
-                    { id: 5, nombre: "LONDON B350", descripcion: "Diseño elegante y minimalista con pantalla digital y analógica.", precio: 280, categoria: "LONDON", imagen: "images/london-b350.jpg", stock: 12 },
-                    { id: 6, nombre: "BAM G-180", descripcion: "Modelo básico con gran durabilidad y diseño colorido para jóvenes.", precio: 89, categoria: "BAM-G", imagen: "images/bam-g-180.jpg", stock: 20 }
+                    { id: 1, nombre: "I-GOLD A9000", descripcion: "El icónico G-SHOCK de metal con conectividad Bluetooth y energía solar.", precio: 999, categoria: "I-GOLD", imagen: "imagenes/RelojAAA.jpg", stock: 10 },
+                    { id: 2, nombre: "LONDON B500", descripcion: "Elegancia deportiva con tecnología Bluetooth y cronógrafo de alta precisión.", precio: 350, categoria: "LONDON", imagen: "imagenes/rELOJBBB.jpg", stock: 15 },
+                    { id: 3, nombre: "BAM G-290", descripcion: "Diseño juvenil y vibrante con resistencia al agua y múltiples funciones.", precio: 120, categoria: "BAM-G", imagen: "imagenes/RelojCCC.jpg", stock: 8 },
+                    { id: 4, nombre: "I-GOLD A8500", descripcion: "Versión clásica con acabado dorado y funciones avanzadas de cronometraje.", precio: 699, categoria: "I-GOLD", imagen: "imagenes/rELOJaa.jpg", stock: 5 },
+                    { id: 5, nombre: "LONDON B350", descripcion: "Diseño elegante y minimalista con pantalla digital y analógica.", precio: 280, categoria: "LONDON", imagen: "imagenes/relojBB.jpg", stock: 12 },
+                    { id: 6, nombre: "BAM G-180", descripcion: "Modelo básico con gran durabilidad y diseño colorido para jóvenes.", precio: 89, categoria: "BAM-G", imagen: "imagenes/Relojcccc.jpg", stock: 20 }
                 ];
             } else {
                 // cargar los productos desde productos.json
