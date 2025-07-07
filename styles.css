@@ -129,10 +129,10 @@ body {
 }
 
 .cart-icon {
-    width: 20px;
-    height: 20px;
-    color: white;
+  font-size: 24px;
+  color: white;
 }
+
 
 .cart-count {
     position: absolute;
@@ -906,6 +906,71 @@ body {
 .notification {
     animation: slideInFromRight 0.3s ease;
 }
+
+
+
+
+/* Sobre nosotros edits */
+
+
+.sobre-texto-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #444;
+}
+
+.timeline {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 800px;
+  margin-inline: auto;
+  border-left: 3px solid #4ecdc4;
+  padding-left: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.3rem;
+  top: 0.4rem;
+  width: 15px;
+  height: 15px;
+  background: #4ecdc4;
+  border-radius: 50%;
+}
+
+.timeline-item h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.timeline-item p {
+  margin: 0.2rem 0 0 0;
+  color: #666;
+}
+
+.imagen-sobre-nosotros {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.imagen-sobre-nosotros img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+
+
 
 /* Medias, etc */
 
