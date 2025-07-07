@@ -263,40 +263,47 @@ class TiendaIRIS {
 
   // FINALIZACIÓN DE COMPRA
 
-    finalizarCompra() {
-        if (this.carrito.length === 0) {
-            this.mostrarNotificacion('🛒 Tu carrito está vacío', 'warning');
-            return;
-        }
-
-        const stockInsuficiente = this.carrito.some(item => {
-            const producto = this.productos.find(p => p.id === item.id);
-            return item.cantidad > producto.stock;
-        });
-
-        if (stockInsuficiente) {
-            this.mostrarNotificacion('⚠️ Algunos productos no tienen stock suficiente', 'warning');
-            return;
-        }
-
-        const resumenOrden = this.carrito.map(item => 
-            `${item.nombre} x${item.cantidad} - $${(item.precio * item.cantidad).toFixed(2)}`
-        ).join('<br>');
-
-        const total = this.calcularTotal();
-        const numeroOrden = this.generarNumeroOrden();
-
-        Swal.fire({
-            title: '¡Compra realizada!',
-            html: `Gracias por tu compra.<br><strong>Total:</strong> $${total}<br><strong>Número de orden:</strong> #${numeroOrden}`,
-            icon: 'success',
-            confirmButtonText: 'Ver detalles',
-            confirmButtonColor: '#4ecdc4'
-        }).then(() => {
-            this.mostrarModalExito(resumenOrden, total, numeroOrden);
-            this.cerrarCarrito();
-        });
+   finalizarCompra() {
+    if (this.carrito.length === 0) {
+        this.mostrarNotificacion('🛒 Tu carrito está vacío', 'warning');
+        return;
     }
+
+    const stockInsuficiente = this.carrito.some(item => {
+        const producto = this.productos.find(p => p.id === item.id);
+        return item.cantidad > producto.stock;
+    });
+
+    if (stockInsuficiente) {
+        this.mostrarNotificacion('⚠️ Algunos productos no tienen stock suficiente', 'warning');
+        return;
+    }
+
+    const resumenOrden = this.carrito.map(item => 
+        `${item.nombre} x${item.cantidad} - $${(item.precio * item.cantidad).toFixed(2)}`
+    ).join('<br>');
+
+    const total = this.calcularTotal();
+    const numeroOrden = this.generarNumeroOrden();
+
+    Swal.fire({
+        title: '¡Compra realizada!',
+        html: `Gracias por tu compra.<br><strong>Total:</strong> $${total}<br><strong>Número de orden:</strong> #${numeroOrden}`,
+        icon: 'success',
+        confirmButtonText: 'Ver detalles',
+        confirmButtonColor: '#4ecdc4'
+    }).then(() => {
+        // ✅ Vaciar el carrito
+        this.carrito = [];
+        this.guardarCarrito();
+        this.actualizarContadorCarrito();
+        this.mostrarCarrito();
+
+        this.mostrarModalExito(resumenOrden, total, numeroOrden);
+        this.cerrarCarrito();
+    });
+}
+
 
     generarNumeroOrden() {
         return Date.now().toString().slice(-8);
