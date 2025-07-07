@@ -949,11 +949,13 @@ body {
 }
 
 .hero h1 {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid white;
-  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  animation: fadeInUp 1.2s ease both;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: white;
 }
+
 
 @keyframes blink {
   50% { border-color: transparent; }
